@@ -7,6 +7,15 @@
 
 // I AM NOT DONE
 
+#[macro_use]
+mod macro_mod {
+    macro_rules! my_macro {
+        ($val: expr) => {
+            format!("Hello {}", $val)
+        };
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
